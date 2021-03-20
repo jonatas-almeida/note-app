@@ -40,6 +40,12 @@ ion-title{
     color: #acacac;
 }
 
+html,
+body{
+    height: 100vh;
+    background: white;
+}
+
 .task-modal{
     width: 100%;
     height: 100%;
