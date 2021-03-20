@@ -121,6 +121,7 @@ ion-toolbar{
     align-items: center;
     transition: all .3s;
     z-index: 99;
+    cursor: pointer;
 }
 
 .btn-add-task:active{
@@ -138,3 +139,14 @@ ion-toolbar{
 }
 
 
+@media only screen and (min-width: 1920px){
+    .toolbar{
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .task-container{
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
