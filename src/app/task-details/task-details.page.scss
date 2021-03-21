@@ -1,0 +1,52 @@
+.task-details-container{
+    padding: 20px;
+}
+
+ion-toolbar{
+    --padding-start: 20px;
+    --padding-end: 20px;
+}
+
+.task-details-content h3{
+    font-size: 16pt;
+    font-weight: bold;
+    color: white;
+}
+
+.description-text{
+    color: #222;
+}
+
+.task-date{
+    font-size: 12pt;
+    font-weight: normal;
+    color: white;
+}
+
+.task-details-content h4{
+    font-size: 14pt;
+    font-weight: bold;
+    color: #222;
+}
+
+
+.details-container{
+    padding: 15px;
+    background: #008afa;
+    margin-bottom: 50px;
+    border-radius: 5px;
+}
+
+.btn-finish{
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    background: #34dd42;
+    color: white;
+    font-weight: bold;
+    transition: all .3s;
+}
+
+.btn-finish:active{
+    transform: scale(0.9);
+}

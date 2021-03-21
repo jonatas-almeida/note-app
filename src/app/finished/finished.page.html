@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Note List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="finished-container">
+    <div class="finished-content">
+      <div class="finished-wrapper">
+        <h1>Tarefas finalizadas</h1>
+        <hr class="divider">
+        <div class="dismiss-message">
+          <p>{{dismissMessage}}</p>
+        </div>
+        <div class="finished-card" *ngFor="let task of taskFinished">
+          <div class="card-info">
+            <h3 class="finished-card-title">{{task.task_name}}</h3>
+            <p class="card-date">{{task.task_date | date}}</p>
+            <p>{{task.task_description}}</p>
+            <button class="btn-dismiss" (click)="deleteFinishTask(task.id)">Dispensar</button>
+          </div>
+          <div class="finish-icon">
+            <ion-icon name="checkmark"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

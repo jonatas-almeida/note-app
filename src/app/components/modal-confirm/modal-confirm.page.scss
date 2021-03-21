@@ -1,0 +1,35 @@
+.modal-confirm-wrapper{
+    padding: 30px;
+}
+
+.modal-confirm-wrapper h1{
+    font-weight: bold;
+    color: #008afa;
+    margin-bottom: 30px;
+}
+
+.modal-buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.btn{
+    padding: 10px;
+    box-shadow: 0px 10px 20px rgba($color: #000000, $alpha: 0.1);
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-excluir{
+    width: 150px;
+    background: #ee3d3d;
+    color: white;
+}
+
+.btn-cancelar{
+    background: #c9c9c9;
+    color: #222;
+}

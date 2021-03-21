@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Note List</ion-title>
+    <ion-buttons slot="end">
+      <button class="btn-fechar-modal" (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="modal-edit-container">
+    <div class="modal-edit-content">
+      <div class="modal-edit-wrapper">
+        <h1 class="modal-title">Editar tarefa</h1>
+        <form class="edit-form" [formGroup]="editForm">
+          <label>Nome da tarefa:</label>
+          <input type="text" formControlName="task_name" name="task_name">
+          <label>Data da tarefa:</label>
+          <input type="date" formControlName="task_date" name="task_date">
+          <label>Descrição:</label>
+          <input type="text" formControlName="task_description" name="task_description">
+          <button class="btn-edit" (click)="changeTask()">Salvar alterações</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</ion-content>

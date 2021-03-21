@@ -1,0 +1,61 @@
+ion-toolbar{
+    padding: 0px 20px;
+}
+
+.btn-fechar-modal{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 5px;
+    background: white;
+    box-shadow: 0px 5px 10px rgba($color: #000000, $alpha: 0.1);
+}
+
+.modal-edit-wrapper{
+    padding: 20px;
+}
+
+.modal-title{
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 30px;
+}
+
+.edit-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-form label{
+    font-weight: bold;
+    color: #969696;
+}
+
+.edit-form input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px rgba($color: #000000, $alpha: 0.1);
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.btn-edit{
+    padding: 15px;
+    font-size: 12pt;
+    font-weight: bold;
+    color: white;
+    background: #008afa;
+    border-radius: 5px;
+    margin-top: 50px;
+    transition: all .3s;
+}
+
+.btn-edit:active{
+    transform: scale(0.9);
+}

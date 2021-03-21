@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title size="large">Note List</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="task-container">
+    <div class="task-content">
+      <div class="task-wrapper">
+        <div class="task-wrapper-content">
+          <h1 class="page-title">Olá, {{userName}}</h1>
+          <button class="btn-finished" routerLink="/finished"><ion-icon name="checkmark-circle"></ion-icon> Concluídos</button>
+        </div>
+        <hr class="divider">
+        <div class="task-card" *ngFor="let task of tasks" routerLink="/task-details/{{task.id}}">
+          <h3>{{task.task_name}}</h3>
+          <div class="task-card-buttons">
+            <button class="btn btn-alterar" (click)="openEditModal(task.id)"><ion-icon name="create-outline" class="task-card-icon"></ion-icon></button>
+            <button class="btn btn-deletar" id="{{task.id}}" (click)="openConfirmModal(task.id)"><ion-icon name="trash-outline" class="task-card-icon"></ion-icon></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Botão para adicionar uma nova tarefa-->
+    <div class="btn-add-task" (click)="openModal()">
+      <ion-icon name="add-outline" class="add-icon"></ion-icon>
+    </div>
+    
+
+  </div>
+  
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Note List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="task-details-container">
+    <div class="task-details-wrapper">
+      <div class="task-details-content">
+        <div class="details-container">
+          <h3>{{details.task_name}}</h3>
+          <p class="task-date">{{details.task_date | date}}</p>
+        </div>
+        <div class="task-info">
+          <h4>Descrição:</h4>
+          <p class="description-text">{{details.task_description}}</p>
+          <button class="btn-finish" (click)="markFinished()">Marcar como concluído</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

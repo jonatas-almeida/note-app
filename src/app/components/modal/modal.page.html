@@ -1,0 +1,25 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <div class="toolbar-itens">
+      <h1 class="page-title">Adicionar tarefa</h1>
+      <button class="btn-close" (click)="closeModal()">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="form-task-container">
+    <form class="task-form" [formGroup]="taskForm">
+      <label>Nome da tarefa:</label>
+      <input type="text" class="form-task-input" formControlName="task_name" name="task_name">
+      <label>Data:</label>
+      <input type="date" class="form-task-input" formControlName="task_date" name="task_date">
+      <label>Descrição:</label>
+      <input type="text" class="form-task-input" formControlName="task_description" name="task_description">
+      <button class="btn-register-task" (click)="addTask()">Adicionar tarefa</button>
+    </form>
+  </div>
+
+</ion-content>

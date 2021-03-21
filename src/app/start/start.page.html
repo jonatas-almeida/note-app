@@ -1,0 +1,16 @@
+<ion-content>
+  <div class="start-container">
+    <div class="start-content">
+      <h1>Bem-vindo ao Note List!</h1>
+      <p>Antes de comerçarmos digite o seu nome abaixo</p>
+      <form class="start-form" [formGroup]="userForm">
+        <input [ngClass]="{'is-invalid': userForm.get('user_name').errors && userForm.get('user_name').touched}" type="text" placeholder="Digite seu nome aqui" [(ngModel)]="userName" name="userName" formControlName="user_name">
+        <div *ngIf="userForm.get('user_name').hasError('required') && userForm.get('user_name').touched" class="invalid-feedback">
+          O nome é obrigatório
+        </div>
+
+        <button class="btn-add-name" (click)="setUser()">Continuar</button>
+      </form>
+    </div>
+  </div>
+</ion-content>
