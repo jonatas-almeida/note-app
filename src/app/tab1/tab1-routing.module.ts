@@ -7,10 +7,6 @@ const routes: Routes = [
   {
     path: '',
     component: Tab1Page,
-  },
-  {
-    path: 'task-edit',
-    component: TaskEditComponent
   }
 ];
 

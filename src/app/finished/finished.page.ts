@@ -21,8 +21,6 @@ export class FinishedPage implements OnInit {
     this.noteService.getAllFinished().subscribe(
       (response) => {
         this.taskFinished = response.reverse();
-      }, error => {
-        alert(`Não foi possível pegar as atividades concluídas: ${error.error}`);
       }
     )
   }

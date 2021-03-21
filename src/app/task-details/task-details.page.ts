@@ -43,7 +43,7 @@ export class TaskDetailsPage implements OnInit {
 
   //Marca uma tarefa como concluída
   markFinished(){
-    this.noteService.postFinishedTask(this.details).subscribe(
+    this.noteService.putFinishedTask(this.details, this.taskId).subscribe(
       () => {
         this.router.navigateByUrl("/tabs/tab1");
         this.deleteFromTask();

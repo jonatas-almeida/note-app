@@ -76,7 +76,7 @@ export class Tab1Page {
   //Pega o usuário no localStorage
   getUser(){
     this.userName = localStorage.getItem('user');
-    this.userMessage = `Bem-vindo!`;
+    this.userMessage = `Bem-vindo(a)!`;
   }
 
 

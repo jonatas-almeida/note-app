@@ -11,6 +11,7 @@ const routes: Routes = [
     path: 'tabs/tab1',
     loadChildren: () => import('./tab1/tab1.module').then(m => m.Tab1PageModule)
   },
+  
   {
     path: 'tabs/tab1/:id',
     component: TaskEditComponent
@@ -30,11 +31,11 @@ const routes: Routes = [
   {
     path: 'task-details/:id',
     loadChildren: () => import('./task-details/task-details.module').then( m => m.TaskDetailsPageModule)
-  },  {
+  },
+  {
     path: 'finished',
     loadChildren: () => import('./finished/finished.module').then( m => m.FinishedPageModule)
   }
-
 
 
 ];

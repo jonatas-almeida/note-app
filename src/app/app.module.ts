@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
+import { RouteReuseStrategy, RouterModule } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ModalPageModule } from './components/modal/modal.module';
 import { StartPageModule } from './start/start.module';
+import { TaskDetailsPageModule } from './task-details/task-details.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,9 @@ import { StartPageModule } from './start/start.module';
     AppRoutingModule,
     HttpClientModule,
     ModalPageModule,
-    StartPageModule
+    StartPageModule,
+    TaskDetailsPageModule,
+    RouterModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

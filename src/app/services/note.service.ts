@@ -8,35 +8,35 @@ import { Task } from '../interfaces/Task';
 })
 export class NoteService {
 
-  baseUrl = 'http://localhost:3000'
+  baseUrl = 'https://joncheck.nexusdev.com.br'
 
   constructor(private http: HttpClient) { }
 
   //Método Get All
   getAllTasks(): Observable<any>{
-    return this.http.get<any>(`${this.baseUrl}/tasks`);
+    return this.http.get<any>(`${this.baseUrl}/api/task`);
   }
 
   //Método Get Task
   getTask(id: number){
-    return this.http.get(`${this.baseUrl}/tasks/${id}`);
+    return this.http.get(`${this.baseUrl}/api/task/${id}`);
   }
 
   //Método Get All Finished
   getAllFinished(): Observable<any>{
-    return this.http.get<any>(`${this.baseUrl}/finished`);
+    return this.http.get<any>(`${this.baseUrl}/api/task/um_id_aqui/finished`);
   }
 
   //Método Post
   postTask(task: Task){
-    return this.http.post(`${this.baseUrl}/tasks`, task);
+    return this.http.post(`${this.baseUrl}/api/task`, task);
   }
 
-  //Método Post Finished
-  postFinishedTask(task: any){
+  //Método Put Finished
+  putFinishedTask(task: any, id: number){
     for(task.id = 0; task.id == task.id; task.id + 1){
       //Caso o ID esteja duplicado ele adiciona + 1. Ex.: id: 1 + 1, id: 2
-      return this.http.post(`${this.baseUrl}/finished`, task);
+      return this.http.put(`${this.baseUrl}/api/task/${id}/finished`, task);
     }
   }
 

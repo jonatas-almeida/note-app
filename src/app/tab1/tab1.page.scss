@@ -138,6 +138,20 @@ ion-toolbar{
     background: white;
 }
 
+.task-not-found{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.task-not-found p{
+    margin-top: 30px;
+    font-weight: bold;
+    color: #585858;
+}
+
 
 @media only screen and (min-width: 1920px){
 

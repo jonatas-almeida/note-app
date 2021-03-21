@@ -15,6 +15,11 @@
           <button class="btn-finished" routerLink="/finished"><ion-icon name="checkmark-circle"></ion-icon> Concluídos</button>
         </div>
         <hr class="divider">
+        <!--Caso não haja nenhuma tarefa adicionada-->
+        <div class="task-not-found" *ngIf="!tasks">
+          <img src="../../assets/not-found.svg">
+          <p>Você ainda não possui tarefas</p>
+        </div>
         <div class="task-card" *ngFor="let task of tasks" routerLink="/task-details/{{task.id}}">
           <h3>{{task.task_name}}</h3>
           <div class="task-card-buttons">

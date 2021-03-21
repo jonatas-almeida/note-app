@@ -68,6 +68,7 @@ export class ModalPage implements OnInit {
 
     this.noteService.postTask(this.task).subscribe(
       (novaTarefa: Task) => {
+        console.log(novaTarefa);
         alert("Tarefa cadastrada com sucesso!");
         this.closeModal();
         window.location.reload();
